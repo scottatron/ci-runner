@@ -18,5 +18,7 @@ RUN mv /gitlab-ci-runner.git /runner
 WORKDIR /runner
 RUN bundle install --deployment
 RUN apt-get remove -qqy build-essential
+RUN apt-get install -qqy git
+
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
