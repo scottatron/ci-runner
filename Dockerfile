@@ -1,4 +1,4 @@
-FROM ruby:2.1.5
+FROM scottatron/ruby:2.1.5
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/default/locale
