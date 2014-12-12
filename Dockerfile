@@ -18,7 +18,7 @@ RUN mv /gitlab-ci-runner.git /runner
 WORKDIR /runner
 RUN bundle install --deployment
 RUN apt-get remove -qqy build-essential
-RUN apt-get install -qqy git
+RUN apt-get install -qqy git docker.io
 # Install Fig
 RUN curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
 RUN apt-get clean
