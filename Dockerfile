@@ -18,8 +18,8 @@ RUN mv /gitlab-ci-runner.git /runner
 WORKDIR /runner
 RUN bundle install --deployment
 
-# Install Fig
-RUN curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
+# Install docker-compose
+RUN curl -L https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose; chmod +x /usr/local/bin/docker-compose
 
 # Clean up
 RUN apt-get clean
